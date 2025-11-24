@@ -1,3 +1,4 @@
+import { PencilLine } from 'lucide-react'
 import React from 'react'
 
 const FeaturesSection = () => {
@@ -13,9 +14,12 @@ const FeaturesSection = () => {
                 <h2 className='md:text-6xl font-serif'>Features</h2>
                 <ul>
                     {features.map((feature, index) => (
-                        <li key={index} className='max-w-xl text-lg mt-4 text-justify text-gray-700'>
-                            {feature}
-                        </li>
+                        <div key={index} className='flex justify-start items-center gap-4 p-2'>
+                            <PencilLine />
+                            <li key={index} className='max-w-xl text-lg mt-4 text-justify text-gray-700'>
+                                {feature}
+                            </li>
+                        </div>
                     ))}
                 </ul>
 
