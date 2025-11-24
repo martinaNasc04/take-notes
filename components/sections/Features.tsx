@@ -10,8 +10,8 @@ const FeaturesSection = () => {
     ]
     return (
         <section id='features' className="min-h-screen flex items-center justify-center relative mx-8">
-            <div className="flex gap-10 items-center  justify-center md:flex-col md:mt-20">
-                <h2 className='md:text-6xl font-serif'>Features</h2>
+            <div className="flex gap-10 items-center  justify-center flex-col md:mt-20">
+                <h2 className='text-3xl md:text-6xl font-serif'>Features</h2>
                 <ul>
                     {features.map((feature, index) => (
                         <div key={index} className='flex justify-start items-center gap-4 p-2'>
