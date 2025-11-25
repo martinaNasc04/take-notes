@@ -8,7 +8,7 @@ import HeroSection from "@/components/sections/Hero";
 import { useState } from "react";
 
 export default function Home() {
-   const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
 
   return (
