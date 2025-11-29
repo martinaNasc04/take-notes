@@ -1,43 +1,38 @@
-import React from 'react'
+import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
+import Link from 'next/link'
+
 
 const SignInPage = () => {
     return (
         <div className='min-h-screen flex items-center justify-center bg-linear-to-br from-purple-50 to-purple-100'>
-            <div className='max-w-md w-full flex flex-col items-center'>
-                <h1 className='text-4xl font-bold mb-6 text-[#303322]'>Sign In</h1>
-                <form className='w-full bg-white p-8 rounded-lg shadow-md'>
-                    <div className='mb-4'>
-                        <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='email'>
-                            Email
-                        </label>
-                        <input
-                            className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#656b4a]'
-                            type='email'
-                            id='email'
-                            placeholder='Enter your email'
-                        />
+            <SignedOut>
+                <div className='max-w-md w-full flex flex-col items-center'>
+                    <h1 className='text-4xl font-bold mb-6 text-[#303322]'>Create your account or sign in</h1>
+                    <div className='flex gap-4'>
+
+
+                        <SignUpButton mode="modal"  >
+                            <button className='cursor-pointer p-4 rounded-lg bg-[#303322] text-white'>Sign Up</button>
+                        </SignUpButton>
+                        <SignInButton mode="modal" >
+                            <button className='cursor-pointer p-4 rounded-lg bg-[#303322] text-white'>Sign In</button>
+                        </SignInButton>
+
                     </div>
-                    <div className='mb-4'>
-                        <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='password'>
-                            Password
-                        </label>
-                        <input
-                            className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#656b4a]'
-                            type='password'
-                            id='password'
-                            placeholder='Enter your password'
-                        />
-                    </div>
-                    <button
-                        className='w-full bg-[#656b4a] hover:bg-[#565b3a] cursor-pointer text-white py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#656b4a]'
-                        type='submit'
-                    >
-                        Sign In
-                    </button>
-                    <p className='text-gray-400'>This is just a example of sign in page. The authentication is not implemented, it will be implemented in the future.</p>
-                </form>
-            </div>
-        </div>
+                </div>
+            </SignedOut>
+            {/* Only will show up when already signed in */}
+            <SignedIn>
+                <div className='flex flex-col space-y-4 items-center'>
+                    <h2 className='text-2xl'>You are already signed in</h2>
+                    <UserButton showName />
+                    <Link href="/notes" className=' p-4 rounded-lg bg-[#303322] text-white'>
+                        Go to Notes</Link>
+                </div>
+
+            </SignedIn>
+
+        </div >
     )
 }
 
