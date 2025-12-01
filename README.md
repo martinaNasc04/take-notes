@@ -11,4 +11,6 @@ Projeto Take Notes é uma aplicação web desenvolvida com Next.js e TypeScript,
 - TypeScript
 - Tailwind CSS
 - Lucide Icons
+- Clerk
+- Prisma
 ----

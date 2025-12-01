@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+:root {
+    /* Moss green */
+    --moss-900: #303322;
+    --moss-800: #4A4E3A;
+    --moss-700: #5F644C;
+    --moss-600: #767C63;
+    --moss-200: #AEB9A0;
+    --moss-100: #DEE6D7;
+
+    /* Earth accents */
+    --earth-gold: #C3A76F;
+    --earth-cream: #E3D7BB;
+    --earth-sand: #D8C092;
+    --earth-caramel: #B68448;
+
+    /* Neutrals */
+    --parchment-100: #F2EFE8;
+    --parchment-200: #E7E3D5;
+    --parchment-300: #DDD6C5;
+    --sage-shadow: #8B8F79;
+
+    /* Others */
+    --terra-brick: #AC3F21;
+    --terra-rose: #B56A60;
+    --teal-muted: #537C6E;
+    --soft-indigo: #6C6F93;
+}

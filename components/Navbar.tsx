@@ -1,5 +1,5 @@
 'use client'
-import { NotebookPen } from 'lucide-react'
+import { Menu, NotebookPen } from 'lucide-react'
 import React, { useEffect } from 'react'
 
 const Navbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean, setMenuOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
@@ -10,7 +10,7 @@ const Navbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean, setMenuOpen: Rea
 
     return (
         
-        <nav className='flex items-center  justify-between font-bold text-[#303322] py-3 md:py-2 px-8
+        <nav className='flex items-center  justify-between font-bold text-(--moss-900) bg-(--parchment-100) py-3 md:py-2 px-8
         fixed top-0 z-40 w-full 
         backdrop-blur-lg  border-white/10 shadow-lg'>
             <div className='flex items-center gap-2'>
@@ -20,9 +20,9 @@ const Navbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean, setMenuOpen: Rea
             {/* Icon Menu Mobile */}
                 <div className="w-7 h-5 relative cursor-pointer z-40 md:hidden" onClick={() =>
                     setMenuOpen(prev => !prev)}>
-                    &#9776;
+                    <Menu />
                 </div>
-            <div className='hidden md:flex gap-6 text-lg '>
+            <div className='hidden md:flex gap-6 text-2xl '>
                 {/* Future nav items can go here */}
                 <a href="#about">About</a>
                 <a href="#features">Features</a>

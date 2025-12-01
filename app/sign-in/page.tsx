@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const SignInPage = () => {
     return (
-        <div className='min-h-screen flex items-center justify-center bg-linear-to-br from-purple-50 to-purple-100'>
+        <div className='min-h-screen flex items-center justify-center bg-(--moss-100)'>
             <SignedOut>
                 <div className='max-w-md w-full flex flex-col items-center'>
                     <h1 className='text-4xl font-bold mb-6 text-[#303322]'>Create your account or sign in</h1>
@@ -12,10 +12,10 @@ const SignInPage = () => {
 
 
                         <SignUpButton mode="modal"  >
-                            <button className='cursor-pointer p-4 rounded-lg bg-[#303322] text-white'>Sign Up</button>
+                            <button className='cursor-pointer p-4 rounded-lg bg-(--moss-900) text-white'>Sign Up</button>
                         </SignUpButton>
                         <SignInButton mode="modal" >
-                            <button className='cursor-pointer p-4 rounded-lg bg-[#303322] text-white'>Sign In</button>
+                            <button className='cursor-pointer p-4 rounded-lg bg-(--moss-900) text-white'>Sign In</button>
                         </SignInButton>
 
                     </div>
@@ -26,7 +26,7 @@ const SignInPage = () => {
                 <div className='flex flex-col space-y-4 items-center'>
                     <h2 className='text-2xl'>You are already signed in</h2>
                     <UserButton showName />
-                    <Link href="/notes" className=' p-4 rounded-lg bg-[#303322] text-white'>
+                    <Link href="/notes" className=' p-4 rounded-lg bg-(--moss-900) text-white'>
                         Go to Notes</Link>
                 </div>
 

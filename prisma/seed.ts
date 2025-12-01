@@ -4,7 +4,7 @@ import { PrismaClient } from "@prisma/client"
 const prisma = new PrismaClient()
 
 async function main() {
-    const demoUserId = 'user_36ARJEMNlYL0vWvMmExH1zDSJAR' // Replace with a valid Clerk user ID
+    const demoUserId = 'userId' // Replace with a valid Clerk user ID
 
     // Create sample
     await prisma.notes.createMany({
