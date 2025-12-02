@@ -26,7 +26,7 @@ export default async function NewNotePage() {
                 </div>
 
                 <div className='max-w-2xl'>
-                    <div className='bg-(--parchment-200) rounded-lg border border-gray-200 p-6'>
+                    <div className='bg-(--parchment-100) rounded-lg border border-gray-200 p-6'>
                         <div className='space-y-6'>
                             <form className="space-y-6" action={createNote} >
                                 <div>
