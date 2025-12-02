@@ -12,10 +12,10 @@ const SignInPage = () => {
 
 
                         <SignUpButton mode="modal"  >
-                            <button className='cursor-pointer p-4 rounded-lg bg-(--moss-900) text-white'>Sign Up</button>
+                            <button className='cursor-pointer p-4 rounded-lg bg-(--moss-900) hover:bg-(--moss-800) transition-colors text-white'>Sign Up</button>
                         </SignUpButton>
                         <SignInButton mode="modal" >
-                            <button className='cursor-pointer p-4 rounded-lg bg-(--moss-900) text-white'>Sign In</button>
+                            <button className='cursor-pointer p-4 rounded-lg bg-(--moss-900) hover:bg-(--moss-800) transition-colors text-white'>Sign In</button>
                         </SignInButton>
 
                     </div>
@@ -26,7 +26,7 @@ const SignInPage = () => {
                 <div className='flex flex-col space-y-4 items-center'>
                     <h2 className='text-2xl'>You are already signed in</h2>
                     <UserButton showName />
-                    <Link href="/notes" className=' p-4 rounded-lg bg-(--moss-900) text-white'>
+                    <Link href="/notes" className=' p-4 rounded-lg bg-(--moss-900) hover:bg-(--moss-800) transition-colors text-white'>
                         Go to Notes</Link>
                 </div>
 
