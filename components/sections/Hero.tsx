@@ -7,7 +7,7 @@ const HeroSection = () => {
         <section id='hero' className="min-h-screen flex items-center justify-center relative mx-8">
             <div className="flex gap-10 items-center  justify-center flex-col md:mt-20">
 
-                <h2 className='text-3xl md:text-6xl font-serif'>Write your ideas and inspirations <a href="/sign-in" className='text-[#303322] font-semibold'>here</a></h2>
+                <h2 className='text-3xl md:text-6xl font-serif'>Write your ideas and inspirations <a href="/sign-in" className='text-(--moss-900) font-semibold'>here</a></h2>
                 <div>
                     <Image
                         src={imageNotes}

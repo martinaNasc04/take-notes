@@ -7,13 +7,14 @@ import React from 'react'
 export default async function NewNotePage() {
     // Get the current logged-in user
         const user = await currentUser()
+        if (!user) throw new Error("User not authenticated")
     return (
         <div className="space-y-10 bg-(--moss-100) min-h-screen">
             <nav className='flex items-center  justify-between font-bold text-(--moss-900) bg-(--parchment-100) py-3 md:py-2 px-8
                     w-full 
                     backdrop-blur-lg  border-white/10 shadow-lg'>
                 <div className='flex items-center gap-2'>
-                    <a href="/notes" className="text-3xl  font-serif ">Take Notes</a>
+                    <a href="/notes" className="text-3xl  font-serif ">TakeNotes</a>
                     <NotebookPen />
                 </div>
             </nav>
@@ -68,7 +69,7 @@ export default async function NewNotePage() {
                                         type="submit"
                                         className="px-6 py-3 cursor-pointer bg-(--soft-indigo) text-white rounded-lg hover:bg-[#6c6f93d2] "
                                     >
-                                        Add Product
+                                        Add Note
                                     </button>
                                     <Link
                                         href="/notes"

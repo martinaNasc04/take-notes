@@ -13,7 +13,7 @@ const NoteSchema = z.object({
 // Create note
 export async function createNote(formData: FormData) {
     const user = await currentUser()
-    
+
     if (!user) throw new Error("User not authenticated")
 
     const parsed = NoteSchema.safeParse({
@@ -29,20 +29,46 @@ export async function createNote(formData: FormData) {
             userId: user?.id
         }
     })
-    
+
     redirect("/notes")
+}
+
+//Update Note
+export async function updateNote(formData: FormData) {
+    // checking if user is authenticated
+    const user = await currentUser()
+    if (!user) throw new Error("User not authenticated")
+
+
+    const id = String(formData.get("id") || "")
+
+    console.log('Note ID in update function:', id)
+    try {
+        await prisma.notes.update({
+            where: { id: id, userId: user?.id },
+            data: {
+                title: String(formData.get("title") || ""),
+                content: String(formData.get("content") || ""),
+            },
+        })
+    } catch (error) {
+        console.error("Error updating note:", error)
+    }
+    redirect("/notes")
+
 }
 
 
 // Delete Note
 export async function deleteNote(formData: FormData) {
     const user = await currentUser()
-    
+
     if (!user) throw new Error("User not authenticated")
-    
+
     const id = String(formData.get("id") || "")
 
     await prisma.notes.deleteMany({
         where: { id: id, userId: user?.id }
     })
+    redirect("/notes")
 }

@@ -2,7 +2,6 @@ import { deleteNote } from "@/lib/actions/notes";
 import prisma from "@/lib/prisma"
 import { currentUser } from "@clerk/nextjs/server"
 import { Edit, Notebook, NotebookPen, Trash2 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 
@@ -23,7 +22,7 @@ export default async function NotesPage() {
                     w-full 
                     backdrop-blur-lg  border-white/10 shadow-lg'>
                 <div className='flex items-center gap-2'>
-                    <a href="/notes" className="text-3xl  font-serif ">Take Notes</a>
+                    <a href="/notes" className="text-3xl  font-serif ">TakeNotes</a>
                     <NotebookPen />
                 </div>
             </nav>
@@ -80,6 +79,7 @@ export default async function NotesPage() {
                                 </div>
                             </div>
                         )}
+
 
 
                     </div>
