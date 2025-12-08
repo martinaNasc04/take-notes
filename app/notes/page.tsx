@@ -4,13 +4,20 @@ import { currentUser } from "@clerk/nextjs/server"
 import { Edit, Notebook, NotebookPen, Trash2 } from "lucide-react";
 import Link from "next/link";
 
+interface Note {
+    id: string
+    userId: string
+    title: string
+    content: string
+    createdAt: Date
+}
 
 export default async function NotesPage() {
     // Get the current logged-in user
     const user = await currentUser()
     const userId = user?.id;
 
-    const notes = await prisma.notes.findMany({
+    const notes: Note[] = await prisma.notes.findMany({
         where: { userId },
         orderBy: { createdAt: "desc" },
     })
@@ -47,7 +54,7 @@ export default async function NotesPage() {
                 ) :
                     (<div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                         {/* Card note */}
-                        {notes.map((note, key) =>
+                        {notes.map((note: Note, key) =>
                             <div key={key} >
                                 <div className="flex items-center bg-(--parchment-200) p-4 rounded-t-lg">
                                     <h2 className="text-2xl font-medium">{note.title}</h2>
