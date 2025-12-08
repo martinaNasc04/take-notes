@@ -1,7 +1,8 @@
+import { UserNavBar } from "@/components/UserNavBar";
 import { deleteNote } from "@/lib/actions/notes";
 import prisma from "@/lib/prisma"
 import { currentUser } from "@clerk/nextjs/server"
-import { Edit, Notebook, NotebookPen, Trash2 } from "lucide-react";
+import { Edit, Notebook, Trash2 } from "lucide-react";
 import Link from "next/link";
 
 interface Note {
@@ -25,14 +26,7 @@ export default async function NotesPage() {
 
     return (
         <div className="space-y-8 bg-(--moss-100) min-h-screen">
-            <nav className='flex items-center  justify-between font-bold text-(--moss-900) bg-(--parchment-100) py-3 md:py-2 px-8
-                    w-full 
-                    backdrop-blur-lg  border-white/10 shadow-lg'>
-                <div className='flex items-center gap-2'>
-                    <a href="/notes" className="font-serif text-3xl ">TakeNotes</a>
-                    <NotebookPen />
-                </div>
-            </nav>
+            <UserNavBar />
 
             <main className="flex flex-col mx-8 space-y-8">
                 <div className="flex items-center justify-between ">

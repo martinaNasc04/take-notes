@@ -11,8 +11,8 @@ const interFont = Inter({
 
 
 export const metadata: Metadata = {
-  title: "Take Notes",
-  description: "A simple and elegant note-taking app to organize your thoughts and ideas.",
+  title: "TakeNotes",
+  description: "Um website simples e intuitivo para guardar suas ideias e inspirações.",
 };
 
 export default function RootLayout({

@@ -1,3 +1,4 @@
+import { UserNavBar } from '@/components/UserNavBar'
 import { createNote } from '@/lib/actions/notes'
 import { currentUser } from '@clerk/nextjs/server'
 import { NotebookPen } from 'lucide-react'
@@ -10,14 +11,7 @@ export default async function NewNotePage() {
     if (!user) throw new Error("User not authenticated")
     return (
         <div className="space-y-10 bg-(--moss-100) min-h-screen">
-            <nav className='flex items-center  justify-between font-bold text-(--moss-900) bg-(--parchment-100) py-3 md:py-2 px-8
-                    w-full 
-                    backdrop-blur-lg  border-white/10 shadow-lg'>
-                <div className='flex items-center gap-2'>
-                    <a href="/notes" className="font-serif text-3xl ">TakeNotes</a>
-                    <NotebookPen />
-                </div>
-            </nav>
+            <UserNavBar />
 
             <main className="flex flex-col mx-8 space-y-8">
                 <div className="flex items-center justify-between ">
