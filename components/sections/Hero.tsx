@@ -10,7 +10,9 @@ const HeroSection = () => {
                     <p className='font-serif text-2xl '>Com TakeNotes, você pode criar novas notas, editá-las e deletar aquelas que não são mais importantes.</p>
                     <Link href="/sign-in" className=' p-4 rounded-lg bg-(--moss-900) hover:bg-(--moss-800) transition-colors text-white'>
                         Comece Aqui!</Link>
+                <p className='text-gray-500'>Este é um projeto em desenvolvimento para portfolio pessoal.</p>
                 </div>
+
 
             </div>
         </section>
