@@ -1,4 +1,3 @@
-import { PencilLine } from 'lucide-react'
 import React from 'react'
 
 const FeaturesSection = () => {

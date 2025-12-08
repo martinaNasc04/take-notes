@@ -27,7 +27,7 @@ const SignInPage = () => {
                     <h2 className='text-2xl'>Você já está logado</h2>
                     <UserButton showName />
                     <Link href="/notes" className=' p-4 rounded-lg bg-(--moss-900) hover:bg-(--moss-800) transition-colors text-white'>
-                        Go to Notes</Link>
+                        Vá para suas notas</Link>
                 </div>
 
             </SignedIn>
