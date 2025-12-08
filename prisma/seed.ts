@@ -1,5 +1,5 @@
 // Populate database with initial data
-import { PrismaClient } from "@prisma/client" 
+import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
 
