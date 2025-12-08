@@ -7,7 +7,7 @@ const SignInPage = () => {
         <div className='min-h-screen flex items-center justify-center bg-(--moss-100)'>
             <SignedOut>
                 <div className='flex flex-col items-center w-full max-w-md'>
-                    <h1 className='text-4xl font-bold mb-6 text-[#303322]'>Create your account or sign in</h1>
+                    <h1 className='text-4xl font-bold mb-6 text-[#303322]'>Crie sua conta ou entre para acessar suas notas</h1>
                     <div className='flex gap-4'>
 
 
