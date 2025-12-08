@@ -10,10 +10,10 @@ const Navbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean, setMenuOpen: Rea
 
     return (
         
-        <nav className='flex items-center  justify-between font-bold text-(--moss-900) bg-(--parchment-100) py-3 md:py-2 px-8
+        <nav className='flex items-center justify-between font-bold text-(--moss-900) bg-(--parchment-100) py-3 md:py-2 px-8
         fixed top-0 z-40 w-full 
         backdrop-blur-lg  border-white/10 shadow-lg'>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-2 py-2'>
                 <a href="#hero" className="font-serif text-3xl ">TakeNotes</a>
                 <NotebookPen />
             </div>

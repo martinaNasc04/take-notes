@@ -2,14 +2,13 @@ import React from 'react'
 
 const AboutSection = () => {
     return (
-        <section id='about' className="min-h-screen flex items-center justify-center relative mx-8">
-            <div className="flex gap-10 items-center  justify-center flex-col md:mt-20">
-                <h2 className='text-3xl md:text-6xl font-serif'>About Take Notes</h2>
-                <p className='max-w-xl text-lg mt-4 text-justify text-gray-700'>
-                    Take Notes is a simple and intuitive note-taking application designed to help you capture your ideas, 
-                    inspirations, and important information effortlessly. Whether you&apos;re a student, 
-                    professional, or just someone who loves to jot down thoughts, 
-                    Take Notes provides a clean and distraction-free environment for all your note-taking needs.
+        <section id='about' className="relative flex items-center justify-center min-h-screen mx-8">
+            <div className="flex flex-col items-center justify-center gap-10 md:mt-20">
+                <h2 className='font-serif text-3xl md:text-6xl'>Sobre TakeNotes</h2>
+                <p className='max-w-xl mt-4 text-lg text-justify text-gray-700'>
+                    TakeNotes é um website simples e intuitivo para guardar suas ideias e inspirações.
+                    Seja você um estudante, profissional ou alguém que goste de anotar seus pensamentos, 
+                    TakeNotes oferece um ambiente limpo e sem distração para organizar suas anotações.
                 </p>
             </div>
         </section>

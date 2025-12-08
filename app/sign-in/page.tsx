@@ -12,10 +12,10 @@ const SignInPage = () => {
 
 
                         <SignUpButton mode="modal"  >
-                            <button className='cursor-pointer p-4 rounded-lg bg-(--moss-900) hover:bg-(--moss-800) transition-colors text-white'>Sign Up</button>
+                            <button className='cursor-pointer p-4 rounded-lg bg-(--moss-900) hover:bg-(--moss-800) transition-colors text-white'>Cadastrar</button>
                         </SignUpButton>
                         <SignInButton mode="modal" >
-                            <button className='cursor-pointer p-4 rounded-lg bg-(--moss-900) hover:bg-(--moss-800) transition-colors text-white'>Sign In</button>
+                            <button className='cursor-pointer p-4 rounded-lg bg-(--moss-900) hover:bg-(--moss-800) transition-colors text-white'>Entrar</button>
                         </SignInButton>
 
                     </div>

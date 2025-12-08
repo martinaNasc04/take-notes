@@ -27,3 +27,7 @@
     --teal-muted: #537C6E;
     --soft-indigo: #6C6F93;
 }
+
+html{
+    scroll-behavior: smooth;
+}
