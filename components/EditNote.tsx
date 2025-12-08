@@ -12,10 +12,10 @@ export default function EditNoteComponent({ note }: { note: NoteProps }) {
     return (
 
 
-        <main className="mx-8 flex flex-col space-y-8">
+        <main className="flex flex-col mx-8 space-y-8">
             <div className="flex items-center justify-between ">
 
-                <h1 className="text-4xl md:text-3xl font-sans font-semibold text-gray-900 ">Update Note</h1>
+                <h1 className="font-sans text-4xl font-semibold text-gray-900 md:text-3xl ">Editar Nota</h1>
 
             </div>
 
@@ -27,9 +27,9 @@ export default function EditNoteComponent({ note }: { note: NoteProps }) {
                             <div>
                                 <label
                                     htmlFor="title"
-                                    className="block text-sm font-medium text-gray-700 mb-2"
+                                    className="block mb-2 text-sm font-medium text-gray-700"
                                 >
-                                    Title:
+                                    Título:
                                 </label>
                                 <input
                                     type="text"
@@ -37,7 +37,7 @@ export default function EditNoteComponent({ note }: { note: NoteProps }) {
                                     name="title"
                                     required
                                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent"
-                                    placeholder="Enter the note's title..."
+                                    placeholder="Escreva o nome da título da nota..."
                                     defaultValue={note.title}
 
                                 />
@@ -46,9 +46,9 @@ export default function EditNoteComponent({ note }: { note: NoteProps }) {
                             <div>
                                 <label
                                     htmlFor="content"
-                                    className="block text-sm font-medium text-gray-700 mb-2"
+                                    className="block mb-2 text-sm font-medium text-gray-700"
                                 >
-                                    Content:
+                                    Conteúdo:
                                 </label>
                                 <input
                                     type="text"
@@ -56,7 +56,7 @@ export default function EditNoteComponent({ note }: { note: NoteProps }) {
                                     name="content"
                                     required
                                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent"
-                                    placeholder="Enter the note's content..."
+                                    placeholder="Escreva o conteúdo da nota..."
                                     defaultValue={note.content}
 
                                 />
@@ -67,13 +67,13 @@ export default function EditNoteComponent({ note }: { note: NoteProps }) {
                                     type="submit"
                                     className="px-6 py-3 cursor-pointer bg-(--soft-indigo) text-white rounded-lg hover:bg-[#6c6f93d2] "
                                 >
-                                    Update Note
+                                    Salvar
                                 </button>
                                 <Link
                                     href="/notes"
                                     className="px-6 py-3 bg-(--terra-rose) text-gray-800 rounded-lg hover:bg-[#b56a60d3]"
                                 >
-                                    Cancel
+                                    Cancelar
                                 </Link>
                             </div>
                         </form>
