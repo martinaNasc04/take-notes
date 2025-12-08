@@ -14,19 +14,19 @@ const Navbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean, setMenuOpen: Rea
         fixed top-0 z-40 w-full 
         backdrop-blur-lg  border-white/10 shadow-lg'>
             <div className='flex items-center gap-2'>
-                <a href="#hero" className="text-3xl  font-serif ">Take Notes</a>
+                <a href="#hero" className="font-serif text-3xl ">TakeNotes</a>
                 <NotebookPen />
             </div>
             {/* Icon Menu Mobile */}
-                <div className="w-7 h-5 relative cursor-pointer z-40 md:hidden" onClick={() =>
+                <div className="relative z-40 h-5 cursor-pointer w-7 md:hidden" onClick={() =>
                     setMenuOpen(prev => !prev)}>
                     <Menu />
                 </div>
-            <div className='hidden md:flex gap-6 text-2xl '>
+            <div className='hidden gap-6 text-2xl md:flex '>
                 {/* Future nav items can go here */}
-                <a href="#about">About</a>
-                <a href="#features">Features</a>
-                <a href="#contact">Contact</a>
+                <a href="#about">Sobre</a>
+                <a href="#features">Funcionalidades</a>
+                <a href="#contact">Contatos</a>
             </div>
 
         </nav>
