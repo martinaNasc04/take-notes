@@ -3,20 +3,19 @@ import React from 'react'
 
 const FeaturesSection = () => {
     const features = [
-        "Create, manage and share notes with ease. Our application offers a user-friendly interface.",
-        "Search and organize your notes efficiently with tags and categories.",
-        "Access your notes from any device, anytime.",
-        "Enjoy a distraction-free writing experience with our clean and intuitive design."
+        "Criação de notas: Adicione ideias e informações importantes facilmente em um clique.",
+        "Edição simples:  Atualize suas notas de forma rápida e eficiente sempre que necessário.",
+        "Deleção Rápida: Exclua notas que não são mais necessárias com facilidade.",
     ]
     return (
-        <section id='features' className="min-h-screen flex items-center justify-center relative mx-8">
-            <div className="flex gap-10 items-center  justify-center flex-col md:mt-20">
-                <h2 className='text-3xl md:text-6xl font-serif'>Features</h2>
+        <section id='features' className="relative flex items-center justify-center min-h-screen mx-8">
+            <div className="flex flex-col items-center justify-center gap-10 md:mt-20">
+                <h2 className='font-serif text-3xl md:text-6xl'>Funcionalidades</h2>
                 <ul>
                     {features.map((feature, index) => (
-                        <div key={index} className='flex justify-start items-center gap-4 p-2'>
-                            <PencilLine />
-                            <li key={index} className='max-w-xl text-lg mt-4 text-justify text-gray-700'>
+                        <div key={index} className='flex items-center gap-4 p-2'>
+                            
+                            <li key={index} className='max-w-xl mt-4 text-lg text-justify text-gray-700 list-disc'>
                                 {feature}
                             </li>
                         </div>
