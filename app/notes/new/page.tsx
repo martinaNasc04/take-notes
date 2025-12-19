@@ -3,12 +3,13 @@ import { createNote } from '@/lib/actions/notes'
 import { currentUser } from '@clerk/nextjs/server'
 import { NotebookPen } from 'lucide-react'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 import React from 'react'
 
 export default async function NewNotePage() {
     // Get the current logged-in user
     const user = await currentUser()
-    if (!user) throw new Error("User not authenticated")
+    if (!user) redirect('/sign-in')
     return (
         <div className="space-y-10 bg-(--moss-100) min-h-screen">
             <UserNavBar />

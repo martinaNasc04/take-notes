@@ -4,6 +4,7 @@ import prisma from "@/lib/prisma"
 import { currentUser } from "@clerk/nextjs/server"
 import { Edit, Notebook, Trash2 } from "lucide-react";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 interface Note {
     id: string
@@ -16,6 +17,7 @@ interface Note {
 export default async function NotesPage() {
     // Get the current logged-in user
     const user = await currentUser()
+    if (!user) redirect('/sign-in')
     const userId = user?.id;
 
     const notes: Note[] = await prisma.notes.findMany({
