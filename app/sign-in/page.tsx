@@ -24,8 +24,8 @@ const SignInPage = () => {
             {/* Only will show up when already signed in */}
             <SignedIn>
                 <div className='flex flex-col items-center space-y-4'>
-                    <h2 className='text-2xl'>Você já está logado</h2>
                     <UserButton showName />
+                    <h2 className='text-2xl'>Você está logado</h2>
                     <Link href="/notes" className=' p-4 rounded-lg bg-(--moss-900) hover:bg-(--moss-800) transition-colors text-white'>
                         Vá para suas notas</Link>
                 </div>

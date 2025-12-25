@@ -1,7 +1,6 @@
 import { UserNavBar } from '@/components/UserNavBar'
 import { createNote } from '@/lib/actions/notes'
 import { currentUser } from '@clerk/nextjs/server'
-import { NotebookPen } from 'lucide-react'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import React from 'react'
