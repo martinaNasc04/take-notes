@@ -2,7 +2,6 @@ import EditNoteComponent from '@/components/EditNote';
 import { UserNavBar } from '@/components/UserNavBar';
 import prisma from '@/lib/prisma';
 import { currentUser } from '@clerk/nextjs/server';
-import { NotebookPen } from 'lucide-react';
 
 export default async function EditNote({ params }: { params: Promise<{ id: string }> }) {
 

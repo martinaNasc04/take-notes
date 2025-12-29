@@ -1,8 +1,19 @@
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
-import Link from 'next/link'
+'use client'
+import { SignedOut, SignInButton, SignUpButton, useUser } from '@clerk/nextjs'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 
 const SignInPage = () => {
+    const { isSignedIn, isLoaded } = useUser()
+    const router = useRouter()
+    
+    useEffect(() => {
+        if (isLoaded && isSignedIn) {
+            router.push('/notes')
+        }
+    }, [isLoaded, isSignedIn, router])
+
     return (
         <div className='min-h-screen flex px-8 items-center justify-center bg-(--moss-100) '>
             <SignedOut>
@@ -21,16 +32,6 @@ const SignInPage = () => {
                     </div>
                 </div>
             </SignedOut>
-            {/* Only will show up when already signed in */}
-            <SignedIn>
-                <div className='flex flex-col items-center space-y-4'>
-                    <UserButton showName />
-                    <h2 className='text-2xl'>Você está logado</h2>
-                    <Link href="/notes" className=' p-4 rounded-lg bg-(--moss-900) hover:bg-(--moss-800) transition-colors text-white'>
-                        Vá para suas notas</Link>
-                </div>
-
-            </SignedIn>
 
         </div >
     )

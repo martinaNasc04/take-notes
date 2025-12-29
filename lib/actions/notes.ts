@@ -66,9 +66,17 @@ export async function deleteNote(formData: FormData) {
     if (!user) throw new Error("User not authenticated")
 
     const id = String(formData.get("id") || "")
-
-    await prisma.notes.deleteMany({
-        where: { id: id, userId: user?.id }
-    })
+    try {
+        await prisma.notes.deleteMany({
+            where: { id: id, userId: user?.id }
+        })
+    } catch (error) {
+        if (error instanceof Error && error.message === 'NEXT_REDIRECT') {
+            throw error
+        }
+        console.error("Error deleting note:", error)
+        throw error
+    }
     redirect("/notes")
+
 }
